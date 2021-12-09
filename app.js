@@ -3,25 +3,19 @@ var searchButton = $('.search-btn');
 var inputValue = $('.inputValue');
 var arrayOfDesc = [];
 var arrayOfTemp = [];
-
 $(document).ready(function(){
-
-//every changes will be after the click on the search button 
-
+//every changes will be after the click on the search button
     searchButton.on("click",function(){
         console.log("click")
         var cityName = $("#input-text").val();
         if(cityName != ""){
-
             // 'GET'ting the request from the weather API using ajax method : ( $.ajax )  
-
             $.ajax({
                 url:"https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&lang=en&appid=c4e477bbbadbc1ea649b6de02ab1cc4b&units=metric",
                 type:"GET",
                 dataType:"json",
                 // getting each data from the JSON and assign it to variables
                 success:function(data){
-
                     var city = data.name+", "+data.sys.country;
                     var temperature = Math.round(data.main.temp)+"°C";
                     var feelLike = "Feels like "+Math.round(data.main.feels_like)+"°C";
@@ -29,14 +23,10 @@ $(document).ready(function(){
                     var iconId = data.weather[0].icon;
                     var humidity = data.main.humidity+" % of humidity";
                     var wind = Math.round(data.wind.speed)*3.6+" Km/h wind";
-
                     // pushing the weather descriptions to use them to change the background 
-
                     arrayOfDesc.push(desc);
                     arrayOfTemp.push(temperature);
-
                     // changing the background depending on the weather and displaying funny messages
-
                     for(var i=0;i<arrayOfDesc.length;i++){
                         if(arrayOfDesc[i]==="clear sky"){
                             $("body").css("background-image","url('./images/clear-sky.jpg')");
@@ -76,7 +66,6 @@ $(document).ready(function(){
                             $("body").css("background-image","url('./images/default.jpg')")
                         }
                     };
-
                     for(var i=0;i<arrayOfTemp.length;i++){
                         if(arrayOfTemp[i]>30){
                             $("#comment").text("Too hot today, don't forget you sunscreen !")
@@ -87,11 +76,11 @@ $(document).ready(function(){
                         }
                     }
                 // appending the value of the jason elements to the html body tags
-
                     $("#cityLi").text(city);
                     $("#temperatureLi").text(temperature);
                     $("#feelsLike").html(feelLike);
                     $("#descriptionLi").text(desc);
+                    // changing the background depending on the weather description 
                     $("#icon").attr("src","https://openweathermap.org/img/w/"+iconId+".png");
                     $("#humidityLi").text(humidity);
                     $("#windLi").text(wind);
@@ -110,6 +99,7 @@ $(document).ready(function(){
                 }
             });
         }else{
+            //if the input is empty, show a message 
             $("#cityLi").text("Field empty !");
             $("#descriptionLi").text("Tap your city above");
     };
