@@ -10,45 +10,39 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fuzzy+Bubbles:wght@700&family=Inter:wght@200&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fuzzy+Bubbles:wght@700&family=Inter:wght@200&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <title>WEATHER-APP</title>
+    <title>weather-page</title>
 </head>
-<body>
-
     <div class="container">
         <div class="search">
             <input type="text" class="inputValue" id="input-text" placeholder="Search your city">
             <i class="search-btn fas fa-search-location" type="submit" value="search"></i>
         </div>
         <div class="commentary">
-            <p id="comment"></p>
-            
+        <p id="comment"></p>
+    </div>
+    <div class="info-container">
+        <p id="cityLi" type="text"></p>
+        <small id="descriptionLi" type="text">London for exemple . . . </small>
+        <div class="tempAndIcon">
+            <img id="icon" src="">
+            <p id="temperatureLi" type="text"></p>
         </div>
-        <div class="info-container">
-            <p id="cityLi" type="text"></p>
-            <small id="descriptionLi" type="text">London for exemple . . . </small>
-            <div class="tempAndIcon">
-                <img id="icon" src="">
-                <p id="temperatureLi" type="text"></p>
-            </div>
-            <p id="humidityLi" type="text"></p>
-            <p id="windLi" type="text"></p>
-        </div>
-        <div class="more-info">
-            <div class="icon-container">
-                <a class="fab fa-instagram-square" href="http://instagram.com"></a>
-                <a class="fab fa-facebook-square" href="http://facebook.com"></a>
-                <a class="fab fa-twitter-square" href="http://twitter.com"></a>
-            </div>
+        <small id="feelsLike"></small></br>
+        <p id="humidityLi" type="text"></p>
+        <p id="windLi" type="text"></p>
+    </div>
+    <div class="more-info">
+        <div class="icon-container">
+            <a class="fab fa-instagram-square" href="http://instagram.com"></a>
+            <a class="fab fa-facebook-square" href="http://facebook.com"></a>
+            <a class="fab fa-twitter-square" href="http://twitter.com"></a>
         </div>
     </div>
-
-
-
-
+</div>
+</div>
 <script src="app.js"></script>
 </body>
-
 </html>

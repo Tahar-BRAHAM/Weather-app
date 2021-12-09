@@ -22,12 +22,27 @@ body{
     max-width: fit-content;
 }
 
-.search input{
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.inputValue{
+    margin-left: 2%;
+    margin-right: 10%;
     outline: none;
     border-radius: 1.1em;
     border: none;
 }
 
+.inputValue:hover::placeholder{
+    color:transparent;
+}
+
+.tempAndIcon{
+    display: flex;
+    align-items: center;
+}
 
 .info-container{
     color: white;
@@ -55,11 +70,16 @@ body{
     float: right;
 }
 
-.fa-instagram-square{
-    size: 50px;
-}
-
 a{
     color:inherit;
     text-decoration: none;
 }
+
+.search-btn{
+    font-size: xx-large;
+}
+
+.search-btn:hover{
+    color:rgba(63, 63, 63, 0.459);
+}
+
