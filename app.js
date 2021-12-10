@@ -80,7 +80,7 @@ $(document).ready(function(){
                     $("#temperatureLi").text(temperature);
                     $("#feelsLike").html(feelLike);
                     $("#descriptionLi").text(desc);
-                    // changing the background depending on the weather description 
+                    // changing the icon ( descriptive of the weather)
                     $("#icon").attr("src","https://openweathermap.org/img/w/"+iconId+".png");
                     $("#humidityLi").text(humidity);
                     $("#windLi").text(wind);
