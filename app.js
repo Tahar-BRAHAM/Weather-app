@@ -1,4 +1,4 @@
-//declaring variables 
+//declaring variables and arrays 
 var searchButton = $('.search-btn');
 var inputValue = $('.inputValue');
 var arrayOfDesc = [];
@@ -99,7 +99,7 @@ $(document).ready(function(){
                 }
             });
         }else{
-            //if the input is empty, show a message 
+            //if the input is empty, another message is displayed
             $("#cityLi").text("Field empty !");
             $("#descriptionLi").text("Tap your city above");
     };
